@@ -23,7 +23,7 @@ function TravelMap() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {locations.map((loc, lon) => (
+      {locations.map((loc, idx) => (
         <Marker
           position={[loc.lat, loc.lon]}
           eventHandlers={{ click: () => handleMarkerClick(loc) }}
