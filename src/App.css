@@ -22,3 +22,17 @@ img {
   display: block;
   margin: 10px 0;
 }
+
+.leaflet-container .leaflet-marker-icon {
+  background-image: url("/src/images/marker-icon.png");
+}
+
+.leaflet-container .leaflet-marker-shadow {
+  background-image: url("/src/images/marker-shadow.png");
+}
+
+/* If you also copied the 2x version for retina displays: */
+.leaflet-retina .leaflet-marker-icon {
+  background-image: url("/src/images/marker-icon-2x.png");
+  background-size: 25px 41px;  /* Or whatever size you want to display it at */
+}

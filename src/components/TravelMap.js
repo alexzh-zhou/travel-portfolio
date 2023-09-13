@@ -18,13 +18,13 @@ function TravelMap() {
   };
 
   return (
-    <MapContainer center={[20, 0]} zoom={2} style={{ width: '100%', height: '400px' }}>
+    <MapContainer center={[20, 0]} zoom={2} style={{ width: '100%', height: '600px' }} scrollWheelZoom={true}>
       <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {locations.map((loc, idx) => (
+      {locations.map((loc, lon) => (
         <Marker
-          key={idx}
           position={[loc.lat, loc.lon]}
           eventHandlers={{ click: () => handleMarkerClick(loc) }}
         >
