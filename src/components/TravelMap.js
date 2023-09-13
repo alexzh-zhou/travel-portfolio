@@ -1,8 +1,20 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import './TravelMap.css'
 import { useNavigate } from 'react-router-dom';
-//import { divIcon } from 'leaflet';
+import { divIcon } from 'leaflet';
+
+const pinIcon = divIcon({
+    className: 'custom-pin-icon',
+    html: `
+        <div class="pin-head">
+            <div class="pin-tail"></div>
+        </div>
+    `,
+    iconSize: [20, 30],
+    iconAnchor: [10, 30]
+});
 
 function TravelMap() {
   const navigate = useNavigate();
@@ -10,7 +22,6 @@ function TravelMap() {
   const locations = [
     { name: "New York", lat: 40.7128, lon: -74.0060, id: 1 },
     { name: "Paris", lat: 48.8566, lon: 2.3522, id: 2 },
-    // ... add more locations
   ];
 
   const handleMarkerClick = (loc) => {
@@ -23,10 +34,12 @@ function TravelMap() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {locations.map((loc, idx) => (
-        <Marker
-          position={[loc.lat, loc.lon]}
-          eventHandlers={{ click: () => handleMarkerClick(loc) }}
+      {locations.map((loc) => (
+        <Marker 
+            key={loc.id}
+            position={[loc.lat, loc.lon]}
+            icon={pinIcon}
+            eventHandlers={{ click: () => handleMarkerClick(loc) }}
         >
           <Popup>{loc.name}</Popup>
         </Marker>

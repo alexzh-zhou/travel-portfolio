@@ -8,7 +8,7 @@ body {
 /* Style for the map container */
 .map-container {
   width: 100%;
-  height: 400px;
+  height: 600px;
   margin: 20px 0;
   border-radius: 8px;
   overflow: hidden;
@@ -23,6 +23,8 @@ img {
   margin: 10px 0;
 }
 
+/* Manual implementation of Map Markers/Pins beacuse
+default marker images were not loading 
 .leaflet-container .leaflet-marker-icon {
   background-image: url("/src/images/marker-icon.png");
 }
@@ -30,9 +32,4 @@ img {
 .leaflet-container .leaflet-marker-shadow {
   background-image: url("/src/images/marker-shadow.png");
 }
-
-/* If you also copied the 2x version for retina displays: */
-.leaflet-retina .leaflet-marker-icon {
-  background-image: url("/src/images/marker-icon-2x.png");
-  background-size: 25px 41px;  /* Or whatever size you want to display it at */
-}
+*/

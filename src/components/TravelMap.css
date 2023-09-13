@@ -1,0 +1,19 @@
+.custom-pin-icon .pin-head {
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 20% 30%, rgba(245, 78, 78, 0.54), red);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.custom-pin-icon .pin-tail {
+    width: 2px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
