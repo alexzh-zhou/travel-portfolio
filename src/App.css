@@ -7,7 +7,7 @@ body {
 
 /* Style for the map container */
 .map-container {
-  width: 100%;
+  width: 90%;
   height: 600px;
   margin: 20px 0;
   border-radius: 8px;

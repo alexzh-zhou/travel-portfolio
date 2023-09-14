@@ -7,7 +7,8 @@ function LocationPage() {
 
   const locationData = {
     1: { name: "Seoul", images: ["seoul1.jpg"] },
-    2: { name: "Irvine", images: [""] },
+    2: { name: "Taipei", images: [""] },
+    3: { name: "Byron Bay", images: [""]}
     // ... add data for more locations using their ID
   };
 
