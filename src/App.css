@@ -1,15 +1,7 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
 /* Style for the map container */
 .map-container {
-  width: 90%;
-  height: 600px;
-  margin: 20px 0;
+  height: 800px;
+  margin: 20px auto;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,13 +15,9 @@ img {
   margin: 10px 0;
 }
 
-/* Manual implementation of Map Markers/Pins beacuse
-default marker images were not loading 
-.leaflet-container .leaflet-marker-icon {
-  background-image: url("/src/images/marker-icon.png");
+.Title {
+  font-size: 35px;
+  text-align: center;
+  background-color: rgb(144, 180, 252);
+  padding: auto;
 }
-
-.leaflet-container .leaflet-marker-shadow {
-  background-image: url("/src/images/marker-shadow.png");
-}
-*/

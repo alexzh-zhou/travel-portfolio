@@ -22,7 +22,8 @@ function TravelMap() {
   };
 
   return (
-    <MapContainer center={[20, 0]} zoom={2} style={{ width: '100%', height: '600px' }} scrollWheelZoom={true}>
+    <MapContainer center={[20, 0]} zoom={2} style={{ width: '100%', height: '600px' }} scrollWheelZoom={true}
+    worldCopyJump={true}>
       <TileLayer
         attribution='&copy; Maps Data: <a href="https://about.google/brand-resource-center/products-and-services/geo-guidelines/#required-attribution">Google</a>'
         url="http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"
