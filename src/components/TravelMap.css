@@ -1,3 +1,4 @@
+/* Styles for the custom pins on the map */
 .custom-pin-icon .pin-head {
     width: 16px;
     height: 16px;
@@ -6,6 +7,11 @@
     position: relative;
     background: radial-gradient(circle at 20% 30%, rgba(245, 78, 78, 0.54), red);
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.custom-pin-icon:hover .pin-head {
+    background: radial-gradient(circle at 20% 30%, #ffaaaa, #ff4444);
 }
 
 .custom-pin-icon .pin-tail {
@@ -27,9 +33,11 @@
     padding: 1.5px 5px;
     border-radius: 10px;
     font-size: 12px;
+    color: #333; /* Dark text for better visibility */
+    font-weight: bold;
     white-space: nowrap;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s;
@@ -38,4 +46,21 @@
 .custom-pin-icon:hover .pin-label {
     opacity: 1;
     visibility: visible;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
+
+/* Map container aesthetics */
+.map-container {
+    height: 100%; 
+    margin: 40px auto; 
+    border-radius: 20px; 
+    overflow: hidden;
+    padding-bottom: 108px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease-in-out; 
+    
+  }
+  
+  .map-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }

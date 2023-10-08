@@ -24,7 +24,7 @@ function LocationMarker({ loc, onClick }) {
           icon={pinIcon(loc)}
           eventHandlers={{
             click: () => {
-              map.flyTo([loc.lat, loc.lon], 18, { duration: 1.7});
+              map.flyTo([loc.lat, loc.lon], 10, { duration: 1.1});
               if (onClick) onClick(loc);
             }
           }}

@@ -5,7 +5,8 @@ function importAll(r) {
   }
   
   // imports all images from locationImages directory
-  const importedImages = importAll(require.context('../locationImages', false, /\.(png|jpe?g|svg)$/));
+  const importedImages = importAll(require.context('../locationImages', false, /\.(png|jpe?g|svg)$/i
+  ));
   
   export default importedImages;
   
