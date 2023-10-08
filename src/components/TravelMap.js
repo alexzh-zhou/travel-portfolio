@@ -12,7 +12,7 @@ function TravelMap() {
   const locations = [
     { name: "Seoul", lat: 37.5519, lon: 126.9918, id: 1 },
     { name: "Taipei", lat: 25.0330, lon: 121.5654, id: 2 },
-    { name: "Hervey Bay", lat: -25.2882, lon: 152.7677, id: 3}, //whale watching
+    { name: "Noosa Heads", lat: -26.3961, lon: 153.0894, id: 3}, //surfing, national park
     { name: "Cairns", lat: -16.9203, lon: 145.7710, id: 4}, //snorkeling, scuba diving
     { name: "Airlie Beach", lat: -20.2678, lon: 148.7156, id: 5}, //skydiving
   ];

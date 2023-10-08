@@ -9,12 +9,13 @@ body {
 
 /* Image aesthetics */
 img {
-  max-width: 20%; 
+  width: 100%;  /* Changed from max-width */
   height: auto;
   display: block;
-  margin: 20px auto; 
+  margin: 0 auto;  /* Updated margin to prevent extra space */
   border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  object-fit: cover;  /* Added to maintain aspect ratio */
 }
 
 /* Title aesthetics */
@@ -56,6 +57,8 @@ img {
 
 .image-grid img {
   flex: 0 1 calc(33.333% - 20px); 
+  max-height: 700px;  /* Optional: To set a max height for the images. Adjust as needed. */
+  max-width: 500px;
 }
 
 .back-home-link {
