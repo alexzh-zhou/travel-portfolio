@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Marker, Popup, useMap } from 'react-leaflet';
 import { divIcon } from 'leaflet';
-import './TravelMap.css'
+import './TravelMap.css';
 
 const pinIcon = (loc) => divIcon({
     className: 'custom-pin-icon',
@@ -17,10 +17,40 @@ const pinIcon = (loc) => divIcon({
 
 function LocationMarker({ loc, onClick }) {
     const map = useMap();
+    const [adjustedPosition, setAdjustedPosition] = useState([loc.lat, loc.lon]);
+
+    useEffect(() => {
+      const adjustMarkerPosition = () => {
+          const currentZoom = map.getZoom();
+          let latAdjustment = 0;
+          let lonAdjustment = 0;
   
+          if (currentZoom <= 5) {
+              const startAdjustment = -7; 
+              const endAdjustment = -1;
+  
+              let t = (currentZoom - 2) / (5 - 2); 
+              t = t * t;
+  
+              latAdjustment = startAdjustment + (endAdjustment - startAdjustment) * t;
+          }
+  
+          setAdjustedPosition([loc.lat + latAdjustment, loc.lon + lonAdjustment]);
+      };
+  
+      adjustMarkerPosition(); // Call the function immediately
+  
+      map.on('zoomend', adjustMarkerPosition);
+  
+      return () => {
+          map.off('zoomend', adjustMarkerPosition);
+      };
+  }, [map, loc.lat, loc.lon]);
+  
+
     return (
       <Marker 
-          position={[loc.lat, loc.lon]}
+          position={adjustedPosition}
           icon={pinIcon(loc)}
           eventHandlers={{
             click: () => {
@@ -32,8 +62,6 @@ function LocationMarker({ loc, onClick }) {
         <Popup>{loc.name}</Popup>
       </Marker>
     );
-  }
+}
 
-  export default LocationMarker;
-
-  
+export default LocationMarker;
