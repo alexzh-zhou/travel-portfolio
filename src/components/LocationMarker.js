@@ -11,8 +11,8 @@ const pinIcon = (loc) => divIcon({
             <div class="pin-tail"></div>
         </div>
     `,
-    iconSize: [20, 30],
-    iconAnchor: [10, 30]
+    iconSize: null,
+    iconAnchor: [8, 26]
 });
 
 function LocationMarker({ loc, onClick }) {

@@ -9,7 +9,10 @@ function LocationPage() {
     1: { name: "Seoul", images: ["seoul1.jpg", "s2.jpg", "s3.jpg", "s4.jpg", "s5.JPEG", "s6.JPEG", 
     "s7.JPEG", "s8.JPEG", "s9.JPEG", "s10.JPG", "s11.JPG", "s12.JPG", "s13.JPG"] },
     2: { name: "Taipei", images: [""] },
-    3: { name: "Byron Bay", images: [""]}
+    3: { name: "Hervey Bay", images: [""]}, 
+    4: { name: "Cairns", images: [""]}, 
+    5: { name: "Airlie Beach", images: ["ab1.JPG", "ab2.JPG", "ab3.JPG", "ab4.JPG", "ab5.JPG", "ab6.JPG",
+    "ab7.JPG", "ab8.JPG", "ab9.JPG", "ab10.JPG", "ab11.JPG", "ab12.JPG", "ab13.JPG"]}, 
     // ... add data for more locations using their ID
   };
 
